@@ -12,13 +12,12 @@ npm install @types/express
 */
 
 import express from "express";
+import routes from "./routes";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Working...");
-  // res.json(["A", "B", "C"]);
-});
+app.use(express.json());
+app.use(routes);
 
 app.listen(3333);
 
