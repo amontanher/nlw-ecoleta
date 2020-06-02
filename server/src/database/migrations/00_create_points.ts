@@ -1,5 +1,6 @@
 // this is the type (first letter uppercase)
 import Knex from "knex";
+
 export async function up(knex: Knex) {
   return knex.schema.createTable("points", (table) => {
     table.increments("id").primary();
